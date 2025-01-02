@@ -1,0 +1,1 @@
+This is a charts folder where we store the charts generated.
