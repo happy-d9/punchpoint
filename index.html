@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PunchPoint Monitoring System</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <link rel="icon" type="image/png" href="./static/images/lnt logo.png" />
+
+    <style>
+      body {
+        background-color: #1c3f60;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 94vh;
+        position: relative;
+      }
+
+      .content {
+        background-color: #1c3f60;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        position: relative;
+        z-index: 1;
+        padding-right: 30vw;
+      }
+      .content img {
+        height: 20%;
+      }
+      .content p {
+        font-size: 2.5vh;
+      }
+
+      .img {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding-right: 12vh;
+        padding-top: 7vh;
+      }
+
+      .img img {
+        width: 100%;
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1.5vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2.2vh;
+        font-style: italic;
+        padding-bottom: 2.8vh; /* so that scroll bar on the main page is gone*/
+        /* bottom: 0;  */
+        width: 100%;
+      }
+      @media (max-width:320px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 90.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 1.5vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 35vh;
+        z-index: 1;
+        padding-right: 0vh;
+        /* padding-top: 7vh; */
+        /* margin-right: 15vw; */
+      }
+
+      .img img {
+        /* width: 100%; */
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 30vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:320px) and (max-width:480px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 93.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 1.5vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 30vh;
+        z-index: 1;
+        padding-right: 0vh;
+      }
+
+      .img img {
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 40vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:481px) and (max-width:600px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 93.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 1.5vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 30vh;
+        z-index: 1;
+        padding-right: 0vh;
+      }
+
+      .img img {
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 40vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:601px) and (max-width:768px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 93.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 2vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2.3vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 30vh;
+        z-index: 1;
+        padding-right: 0vh;
+      }
+
+      .img img {
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 40vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:769px) and (max-width:918px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 93.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 2vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2.5vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 30vh;
+        z-index: 1;
+        padding-right: 0vh;
+      }
+
+      .img img {
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 40vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:919px) and (max-width:1024px){
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 93.9vh;
+        position: relative;
+      }
+
+      .content {
+        padding-right: 0;
+        font-size: 2vh;
+      }
+      .content img {
+        height: 10%;
+      }
+      .content p {
+        font-size: 2.5vh;
+      }
+
+      .img {
+        width: 100%;
+        position: absolute;
+        top: 30vh;
+        z-index: 1;
+        padding-right: 0vh;
+      }
+
+      .img img {
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 40vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        font-style: italic;
+        padding-bottom: 3vh;
+        width: 100%;
+        position: relative;
+      } 
+      }
+      @media (min-width:1025px) and (max-width:1280px){
+        body {
+        background-color: #1c3f60;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+
+      .bg-img {
+        display: flex;
+        height: 94vh;
+        position: relative;
+      }
+
+      .content {
+        background-color: #1c3f60;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 2vh;
+        position: relative;
+        z-index: 1;
+        padding-right: 30vw;
+      }
+      .content img {
+        height: 20%;
+      }
+      .content p {
+        font-size: 2.5vh;
+      }
+
+      .img {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding-right: 5vh;
+        padding-top: 10vh;
+      }
+
+      .img img {
+        width: 100%;
+        height: auto;
+      }
+      button {
+        background-color: white;
+        color: #1c3f60;
+        border: none;
+        border-radius: 3vh;
+        padding: 1.5vh 5.5vh;
+        font-size: 2.5vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1.5vh;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+
+      footer {
+        background-color: #1c3f60;
+        color: white;
+        text-align: center;
+        font-size: 2.2vh;
+        font-style: italic;
+        padding-bottom: 2.8vh; /* so that scroll bar on the main page is gone*/
+        /* bottom: 0;  */
+        width: 100%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+        <img src="./static/images/LTEH Logo.png" alt="Logo" class="logo" />
+        <h2>PunchPoint Monitoring System</h2>
+        <br />
+        <p>
+          Leverage AI for real-time punch point classification
+          <br />
+          &
+          <br />
+          AI-Powered Query Assistance
+        </p>
+        <br />
+        <div class="img">
+          <img src="./static/images/bg.gif" />
+        </div>
+        <br />
+        <a href="./login"><button>Login</button></a>
+        <!-- <a href="./domainMenu"><button>Start</button></a> -->
+      </div>
+    </div>
+
+    <footer>© Developed by LTEH - Digital Team for internal use</footer>
+  </body>
+</html>
